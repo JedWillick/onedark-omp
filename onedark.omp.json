@@ -1,0 +1,134 @@
+{
+    "osc99": true,
+    "console_title": true,
+    "console_title_style": "template",
+    "console_title_template": "{{.Shell}} :: {{.Path}}",
+    "blocks": [
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "type": "os",
+                    "style": "powerline",
+                    "foreground": "#ABB2BF",
+                    "properties": {
+                        "prefix": "┌ ",
+                        "postfix": ""
+                    }
+                },
+                {
+                    "type": "path",
+                    "style": "plain",
+                    "foreground": "#61AFEF",
+                    "properties": {
+                        "style": "full",
+                        "enable_hyperlink": false
+                    }
+                },
+                {
+                    "type": "git",
+                    "style": "plain",
+                    "foreground": "#E5C07B",
+                    "properties": {
+                        "prefix": "<#757575,>|</> ",
+                        "fetch_status": true,
+                        "template": "{{ .HEAD }}{{ .BranchStatus }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "prompt",
+            "alignment": "right",
+            "segments": [
+                {
+                    "type": "exit",
+                    "style": "plain",
+                    "foreground": "#ffffff",
+                    "foreground_templates": [
+                        "{{ if gt .Code 0 }}#e91e63{{ end }}"
+                    ],
+                    "leading_diamond": "",
+                    "trailing_diamond": "",
+                    "properties": {
+                        "always_enabled": true,
+                        "template": "",
+                        "postfix": " <#757575,>|</>"
+                    }
+                },
+                {
+                    "type": "battery",
+                    "style": "plain",
+                    "foreground": "#ffffff",
+                    "foreground_templates": [
+                        "{{ if eq .Battery.State 3 }}#40c4ff{{ end }}",
+                        "{{ if le .Percentage 20 }}#E06C75{{ else }}#ffffff{{ end }}"
+                    ],
+                    "properties": {
+                        "template": "{{ if not .Error }}{{ if lt .Percentage 10}}\uf58d{{ else if lt .Percentage 20 }}\uf579{{ else if lt .Percentage 30 }}\uf57a{{ else if lt .Percentage 40 }}\uf57b{{ else if lt .Percentage 50 }}\uf57c{{ else if lt .Percentage 60 }}\uf57d{{ else if lt .Percentage 70 }}\uf57e{{ else if lt .Percentage 80 }}\uf57f{{ else if lt .Percentage 90 }}\uf580{{ else if lt .Percentage 100 }}\uf581{{ else }}\uf578{{ end }} {{.Percentage}}{{ end }}{{.Error}}",
+                        "postfix": "% <#757575,>|</>"
+                    }
+                },
+                {
+                    "type": "shell",
+                    "style": "plain",
+                    "foreground": "#007acc",
+                    "properties": {
+                        "prefix": " ",
+                        "postfix": ""
+                    }
+                },
+                {
+                    "type": "root",
+                    "style": "plain",
+                    "foreground": "#ff8080",
+                    "properties": {
+                        "prefix": " <#757575,>as</> ",
+                        "postfix": "",
+                        "root_icon": "root"
+                    }
+                },
+                {
+                    "type": "time",
+                    "style": "plain",
+                    "foreground": "#689f38",
+                    "properties": {
+                        "prefix": " <#757575,>|</> ",
+                        "postfix": "",
+                        "time_format": "15:04:05"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "type": "text",
+                    "style": "plain",
+                    "foreground": "#ABB2BF",
+                    "properties": {
+                        "prefix": "",
+                        "postfix": "",
+                        "text": "└ "
+                    }
+                },
+                {
+                    "type": "text",
+                    "style": "plain",
+                    "foreground": "#ffffff",
+                    "properties": {
+                        "prefix": "",
+                        "postfix": "",
+                        "text": "$"
+                    }
+                }
+            ]
+        }
+    ],
+    "final_space": true
+}
