@@ -4,4 +4,4 @@
 
 https://ohmyposh.dev/docs/
 
-`wget https://github.com/JedWillick/onedark-omp/blob/main/onedark.omp.json -O ~/bin/onedark.omp.json`
+`wget https://raw.githubusercontent.com/JedWillick/onedark-omp/main/onedark.omp.json -O ~/bin/onedark.omp.json`
