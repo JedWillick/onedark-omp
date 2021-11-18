@@ -15,7 +15,8 @@
                     "foreground": "#ABB2BF",
                     "properties": {
                         "prefix": "┌ ",
-                        "postfix": ""
+                        "postfix": "",
+                        "windows": "\uf17a"
                     }
                 },
                 {
