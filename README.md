@@ -27,14 +27,15 @@ eval "$(oh-my-posh --init --shell zsh --config ~/.poshthemes/onedark.omp.json)"
 ### PowerShell
 
 ```powershell
-Invoke-WebRequest https://raw.githubusercontent.com/JedWillick/onedark-omp/main/onedark.omp.json -O ~\AppData\Local\Programs\oh-my-posh\themes\onedark.omp.json
+Invoke-WebRequest https://raw.githubusercontent.com/JedWillick/onedark-omp/main/onedark.omp.json -OutFile $env:POSH_THEMES_PATH\onedark.omp.json
 ```
 
 Then add the following to `$PROFILE`
 
 ```powershell
+Import-Module oh-my-posh
 $env:POSH_GIT_ENABLED = $true
-Set-PoshPrompt -Theme ~\AppData\Local\Programs\oh-my-posh\themes\onedark.omp.json
+Set-PoshPrompt -Theme $env:POSH_THEMES_PATH\onedark.omp.json
 ```
 
 
