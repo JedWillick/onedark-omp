@@ -125,7 +125,7 @@
                     "properties": {
                         "prefix": "",
                         "postfix": "",
-                        "text": "$"
+                        "template": "{{ if eq .Shell \"powershell\" }}\uf054{{ else }}{{ .Shell }}{{ end }}"
                     }
                 }
             ]
