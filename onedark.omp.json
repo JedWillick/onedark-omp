@@ -14,7 +14,7 @@
                     "style": "powerline",
                     "foreground": "#ABB2BF",
                     "properties": {
-                        "prefix": "┌ ",
+                        "prefix": "\u250c ",
                         "postfix": "",
                         "windows": "\uf17a"
                     }
@@ -35,7 +35,7 @@
                     "properties": {
                         "prefix": "<#757575,>|</> ",
                         "fetch_status": true,
-                        "template": "{{ .HEAD }}{{ .BranchStatus }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}"
+                        "template": "{{ .HEAD }}{{ .BranchStatus }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}"
                     }
                 }
             ]
@@ -52,10 +52,10 @@
                         "{{ if gt .Code 0 }}#e91e63{{ end }}"
                     ],
                     "leading_diamond": "",
-                    "trailing_diamond": "",
+                    "trailing_diamond": "",
                     "properties": {
                         "always_enabled": true,
-                        "template": "",
+                        "template": "\ue23a",
                         "postfix": " <#757575,>|</>"
                     }
                 },
@@ -115,7 +115,7 @@
                     "properties": {
                         "prefix": "",
                         "postfix": "",
-                        "text": "└ "
+                        "text": "\u2514 "
                     }
                 },
                 {
