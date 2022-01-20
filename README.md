@@ -14,7 +14,7 @@ wget https://raw.githubusercontent.com/JedWillick/onedark-omp/main/onedark.omp.j
 ### PowerShell
 
 ```powershell
-Invoke-WebRequest https://raw.githubusercontent.com/JedWillick/onedark-omp/main/onedark.omp.json -OutFile $env:POSH_THEMES_PATH\onedark.omp.json
+Invoke-WebRequest https://raw.githubusercontent.com/JedWillick/onedark-omp/main/onedark.omp.json -OutFile ~\AppData\Local\Programs\oh-my-posh\themes\onedark.omp.json
 ```
 
 
