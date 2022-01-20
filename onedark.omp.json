@@ -126,7 +126,7 @@
                     "properties": {
                         "prefix": "",
                         "postfix": "",
-                        "template": "{{ if eq .Shell \"powershell\" }}\uf054{{ else }}${{ end }}"
+                        "template": "{{ if or (eq .Shell \"powershell\") (eq .Shell \"pwsh\") }}\uf054{{ else }}${{ end }}"
                     }
                 }
             ]
